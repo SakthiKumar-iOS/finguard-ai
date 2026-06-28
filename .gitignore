@@ -1,0 +1,8 @@
+# NEVER commit .env — contains real secrets
+.env
+__pycache__/
+*.pyc
+.venv/
+data/audit_logs/*.jsonl
+.DS_Store
+*.egg-info/

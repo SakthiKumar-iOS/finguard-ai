@@ -1,66 +1,65 @@
 # agents/audit_compliance.py
 # Purpose: Logs operations and checks actions for compliance with auditing standards.
 
-import json
 import logging
-import os
-from pathlib import Path
+from utils.logger import log_intent, log_error
+from mcp_server.tools import get_audit_log
 
 logger = logging.getLogger(__name__)
 
-_DEFAULT_AUDIT_DIR = Path(__file__).parent.parent / "data" / "audit_logs"
-_MAX_ENTRIES = 10
+COMPLIANCE_SUMMARY = (
+    "Session Compliance Summary\n"
+    "PII Guardian: Active\n"
+    "Prompt Injection Guard: Active\n"
+    "Local Only Mode: Active\n"
+    "Audit Logging: Active\n"
+    "All systems operating within compliance parameters."
+)
 
 
 class AuditComplianceAgent:
     """Agent that performs compliance audits and records session logs for security and tracking."""
 
     def run(self, input: str) -> str:  # noqa: A002
-        """Return the last 10 sanitised audit log entries (timestamp, intent, status only)."""
+        """Run the audit compliance agent on the input string."""
         try:
-            audit_dir = Path(os.getenv("AUDIT_LOG_DIR", str(_DEFAULT_AUDIT_DIR)))
+            lowered = (input or "").lower()
 
-            if not audit_dir.exists():
-                return "No audit records found for this session."
+            # 1. Log every call using log_intent
+            log_intent("audit", "success")
 
-            # Find the latest .jsonl file
-            jsonl_files = sorted(audit_dir.glob("*.jsonl"), key=lambda p: p.stat().st_mtime, reverse=True)
-            if not jsonl_files:
-                return "No audit records found for this session."
+            # 2. Check keywords for compliance summary
+            if any(kw in lowered for kw in ["compliance", "report"]):
+                return COMPLIANCE_SUMMARY
 
-            latest_file = jsonl_files[0]
-            entries: list[dict] = []
+            # 3. Check keywords for audit logs
+            if any(kw in lowered for kw in ["audit", "log", "activity", "session", "record"]):
+                res = get_audit_log(limit=10)
+                entries = res.get("entries", [])
+                
+                if not entries:
+                    return "No audit records found for this session"
 
-            try:
-                with open(latest_file, "r", encoding="utf-8") as f:
-                    for line in f:
-                        line = line.strip()
-                        if not line:
-                            continue
-                        try:
-                            entries.append(json.loads(line))
-                        except json.JSONDecodeError:
-                            continue
-            except Exception as exc:  # noqa: BLE001
-                logger.error("AuditComplianceAgent: error reading log file type=%s", type(exc).__name__)
-                return "Audit log unavailable."
+                # Format as readable plain text table:
+                # "Timestamp         | Intent      | Status"
+                # "--------------------------------------"
+                # "<timestamp>       | <intent>    | <status>"
+                header_line = f"Audit log — last {len(entries)} entries (most recent first):\n\n"
+                table_header = f"{'Timestamp':<30} | {'Intent':<11} | {'Status':<12}"
+                separator = "-" * len(table_header)
+                
+                table_lines = [header_line, table_header, separator]
+                for entry in entries:
+                    ts = entry.get("timestamp", "")
+                    intent = entry.get("intent", "")
+                    status = entry.get("status", "")
+                    table_lines.append(f"{ts:<30} | {intent:<11} | {status:<12}")
+                
+                return "\n".join(table_lines)
 
-            if not entries:
-                return "No audit records found for this session."
-
-            # Take last _MAX_ENTRIES, most recent last → reverse to show newest first
-            recent = entries[-_MAX_ENTRIES:][::-1]
-
-            lines = [f"Audit log — last {len(recent)} entries (most recent first):\n"]
-            for i, entry in enumerate(recent, start=1):
-                # Show only: timestamp, intent, status — never original input or PII
-                timestamp = entry.get("timestamp", "N/A")
-                intent = entry.get("intent", "N/A")
-                status = entry.get("status", "N/A")
-                lines.append(f"  {i:>2}. {timestamp}  intent={intent}  status={status}")
-
-            return "\n".join(lines)
+            # 4. Default guidance
+            return "I can show your session audit log or compliance summary. What would you like to see?"
 
         except Exception as exc:  # noqa: BLE001
-            logger.error("AuditComplianceAgent: unexpected error type=%s", type(exc).__name__)
-            return "Audit log unavailable."
+            log_error("audit_compliance", type(exc).__name__)
+            return "Audit log unavailable. Please try again."

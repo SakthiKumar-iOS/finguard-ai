@@ -6,3 +6,4 @@ __pycache__/
 data/audit_logs/*.jsonl
 .DS_Store
 *.egg-info/
+data/audit_logs/*.log

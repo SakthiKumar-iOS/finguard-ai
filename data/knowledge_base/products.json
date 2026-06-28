@@ -1,1 +1,223 @@
-{}
+{
+  "products": [
+    {
+      "product_id": "PROD-001",
+      "name": "Everyday Savings Account",
+      "type": "savings",
+      "description": "A flexible everyday savings account with no monthly fees and easy access to your funds.",
+      "interest_rate": "2.10% p.a. (indicative only)",
+      "min_amount": 0,
+      "max_amount": null,
+      "term": "No fixed term",
+      "fees": {
+        "monthly_fee": "AUD 0.00",
+        "transaction_fee": "AUD 0.00",
+        "atm_fee": "AUD 0.00 at partner ATMs"
+      },
+      "eligibility_criteria": [
+        "Minimum age 18",
+        "Australian resident"
+      ],
+      "features": [
+        "No minimum balance required",
+        "Free online transfers",
+        "Mobile banking access",
+        "Linked debit card available",
+        "No lock-in period"
+      ],
+      "currency": "AUD"
+    },
+    {
+      "product_id": "PROD-002",
+      "name": "High Interest Savings Account",
+      "type": "savings",
+      "description": "A high-yield savings account designed to maximise returns on your savings with a bonus rate structure.",
+      "interest_rate": "4.75% p.a. (indicative only, conditions apply)",
+      "min_amount": 0,
+      "max_amount": 250000,
+      "term": "No fixed term",
+      "fees": {
+        "monthly_fee": "AUD 0.00",
+        "transaction_fee": "AUD 0.00 for eligible transactions",
+        "early_access_fee": "Bonus rate forfeited if balance falls below AUD 1,000"
+      },
+      "eligibility_criteria": [
+        "Minimum age 18",
+        "Australian resident",
+        "Must link to an Everyday Savings Account"
+      ],
+      "features": [
+        "Bonus interest on monthly deposits",
+        "Online and mobile access",
+        "No lock-in period",
+        "Interest calculated daily, paid monthly"
+      ],
+      "currency": "AUD"
+    },
+    {
+      "product_id": "PROD-003",
+      "name": "Term Deposit (12 Month)",
+      "type": "term_deposit",
+      "description": "A fixed-term deposit offering a guaranteed interest rate for a 12-month term.",
+      "interest_rate": "5.10% p.a. (indicative only, fixed for term)",
+      "min_amount": 1000,
+      "max_amount": 2000000,
+      "term": "12 months",
+      "fees": {
+        "monthly_fee": "AUD 0.00",
+        "early_break_fee": "Interest reduction applies for early withdrawal"
+      },
+      "eligibility_criteria": [
+        "Minimum deposit AUD 1,000",
+        "Australian resident"
+      ],
+      "features": [
+        "Guaranteed fixed interest rate",
+        "Interest paid at maturity or monthly (indicative options)",
+        "Auto-renewal option available",
+        "Government deposit guarantee up to AUD 250,000"
+      ],
+      "currency": "AUD"
+    },
+    {
+      "product_id": "PROD-004",
+      "name": "Personal Loan",
+      "type": "personal_loan",
+      "description": "A flexible personal loan suitable for a range of purposes including renovations, vehicles, or consolidation.",
+      "interest_rate": "9.99% – 19.99% p.a. (indicative only, based on credit assessment)",
+      "min_amount": 5000,
+      "max_amount": 50000,
+      "term": "1 – 7 years",
+      "fees": {
+        "establishment_fee": "AUD 250 (indicative)",
+        "monthly_fee": "AUD 10.00 (indicative)",
+        "early_repayment_fee": "May apply — see product terms"
+      },
+      "eligibility_criteria": [
+        "Minimum age 18",
+        "Minimum annual income AUD 30,000",
+        "No defaults in past 5 years",
+        "Australian resident"
+      ],
+      "features": [
+        "Fixed or variable rate options",
+        "Flexible repayment schedule",
+        "Extra repayments allowed",
+        "Redraw facility available (variable rate)"
+      ],
+      "currency": "AUD"
+    },
+    {
+      "product_id": "PROD-005",
+      "name": "Home Loan (Variable)",
+      "type": "home_loan",
+      "description": "A variable rate home loan with flexible repayment options and an offset account feature.",
+      "interest_rate": "6.15% p.a. (indicative only, variable)",
+      "min_amount": 100000,
+      "max_amount": 3000000,
+      "term": "Up to 30 years",
+      "fees": {
+        "establishment_fee": "AUD 600 (indicative)",
+        "monthly_fee": "AUD 10.00 (indicative)",
+        "discharge_fee": "AUD 350 (indicative)"
+      },
+      "eligibility_criteria": [
+        "Minimum age 18",
+        "Minimum annual income AUD 60,000",
+        "Minimum deposit 10% of property value",
+        "Australian resident"
+      ],
+      "features": [
+        "Offset account available",
+        "Unlimited extra repayments",
+        "Redraw facility",
+        "Rate lock option at application"
+      ],
+      "currency": "AUD"
+    },
+    {
+      "product_id": "PROD-006",
+      "name": "Home Loan (Fixed)",
+      "type": "home_loan",
+      "description": "A fixed rate home loan providing repayment certainty for an agreed fixed period.",
+      "interest_rate": "5.89% p.a. (indicative only, fixed 3 years)",
+      "min_amount": 100000,
+      "max_amount": 3000000,
+      "term": "1 – 5 years fixed, then reverts to variable",
+      "fees": {
+        "establishment_fee": "AUD 600 (indicative)",
+        "monthly_fee": "AUD 10.00 (indicative)",
+        "break_cost_fee": "Significant costs may apply if fixed rate broken early"
+      },
+      "eligibility_criteria": [
+        "Minimum age 18",
+        "Minimum annual income AUD 60,000",
+        "Minimum deposit 10% of property value",
+        "Australian resident"
+      ],
+      "features": [
+        "Repayment certainty for fixed period",
+        "Rate protected from market increases during fixed term",
+        "Split loan option available"
+      ],
+      "currency": "AUD"
+    },
+    {
+      "product_id": "PROD-007",
+      "name": "Platinum Credit Card",
+      "type": "credit_card",
+      "description": "A premium credit card with an elevated rewards program, complimentary travel insurance, and a high credit limit.",
+      "interest_rate": "20.99% p.a. on purchases (indicative only)",
+      "min_amount": 6000,
+      "max_amount": 50000,
+      "term": "Revolving credit",
+      "fees": {
+        "annual_fee": "AUD 295 (indicative)",
+        "cash_advance_fee": "3% of transaction amount",
+        "late_payment_fee": "AUD 15.00 (indicative)"
+      },
+      "eligibility_criteria": [
+        "Minimum age 18",
+        "Minimum annual income AUD 25,000",
+        "No bankruptcies in past 7 years",
+        "Australian resident"
+      ],
+      "features": [
+        "Rewards points on eligible purchases",
+        "Complimentary travel insurance (conditions apply)",
+        "Concierge service",
+        "Up to 55 days interest-free",
+        "Contactless payments"
+      ],
+      "currency": "AUD"
+    },
+    {
+      "product_id": "PROD-008",
+      "name": "Basic Credit Card",
+      "type": "credit_card",
+      "description": "A straightforward low-fee credit card ideal for everyday purchases with a low interest rate.",
+      "interest_rate": "12.99% p.a. on purchases (indicative only)",
+      "min_amount": 1000,
+      "max_amount": 10000,
+      "term": "Revolving credit",
+      "fees": {
+        "annual_fee": "AUD 0.00",
+        "cash_advance_fee": "2% of transaction amount",
+        "late_payment_fee": "AUD 10.00 (indicative)"
+      },
+      "eligibility_criteria": [
+        "Minimum age 18",
+        "Minimum annual income AUD 25,000",
+        "No bankruptcies in past 7 years",
+        "Australian resident"
+      ],
+      "features": [
+        "No annual fee",
+        "Up to 44 days interest-free",
+        "Contactless payments",
+        "Simple online account management"
+      ],
+      "currency": "AUD"
+    }
+  ]
+}

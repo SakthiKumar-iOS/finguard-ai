@@ -1,1 +1,697 @@
-[]
+{
+  "users": {
+    "U001": {
+      "profile": {
+        "user_id": "U001",
+        "name": "User One",
+        "account_number": "****1234",
+        "account_type": "Everyday Savings",
+        "currency": "AUD"
+      },
+      "transactions": [
+        {
+          "transaction_id": "TXN-U001-001",
+          "date": "2026-06-27",
+          "description": "Weekly grocery shop",
+          "amount": 145.30,
+          "type": "debit",
+          "category": "groceries",
+          "merchant": "FreshMart AU",
+          "balance_after": 4210.50,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-002",
+          "date": "2026-06-26",
+          "description": "Monthly salary credit",
+          "amount": 5500.00,
+          "type": "credit",
+          "category": "salary",
+          "merchant": "Employer Payroll",
+          "balance_after": 4355.80,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-003",
+          "date": "2026-06-25",
+          "description": "Lunch at Cafe Central",
+          "amount": 28.50,
+          "type": "debit",
+          "category": "dining",
+          "merchant": "Cafe Central",
+          "balance_after": 4327.30,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-004",
+          "date": "2026-06-24",
+          "description": "Electricity bill payment",
+          "amount": 210.00,
+          "type": "debit",
+          "category": "utilities",
+          "merchant": "PowerCo AU",
+          "balance_after": 4298.80,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-005",
+          "date": "2026-06-23",
+          "description": "Cinema tickets",
+          "amount": 42.00,
+          "type": "debit",
+          "category": "entertainment",
+          "merchant": "StarCinemas",
+          "balance_after": 4508.80,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-006",
+          "date": "2026-06-22",
+          "description": "Online clothing purchase",
+          "amount": 189.95,
+          "type": "debit",
+          "category": "shopping",
+          "merchant": "StyleHub AU",
+          "balance_after": 4550.80,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-007",
+          "date": "2026-06-21",
+          "description": "Public transport top-up",
+          "amount": 50.00,
+          "type": "debit",
+          "category": "transport",
+          "merchant": "TransitCard AU",
+          "balance_after": 4740.75,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-008",
+          "date": "2026-06-20",
+          "description": "GP consultation",
+          "amount": 85.00,
+          "type": "debit",
+          "category": "medical",
+          "merchant": "City Medical Centre",
+          "balance_after": 4790.75,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-009",
+          "date": "2026-06-19",
+          "description": "Hotel booking — Melbourne",
+          "amount": 320.00,
+          "type": "debit",
+          "category": "travel",
+          "merchant": "StayEasy Hotels",
+          "balance_after": 4875.75,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-010",
+          "date": "2026-06-18",
+          "description": "Bank transfer to savings",
+          "amount": 500.00,
+          "type": "debit",
+          "category": "transfer",
+          "merchant": "Internal Transfer",
+          "balance_after": 5195.75,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-011",
+          "date": "2026-06-17",
+          "description": "Supermarket — weekend shop",
+          "amount": 112.40,
+          "type": "debit",
+          "category": "groceries",
+          "merchant": "GreenGrocer AU",
+          "balance_after": 5695.75,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-012",
+          "date": "2026-06-16",
+          "description": "Subscription — streaming service",
+          "amount": 19.99,
+          "type": "debit",
+          "category": "entertainment",
+          "merchant": "StreamPlus AU",
+          "balance_after": 5808.15,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-013",
+          "date": "2026-06-15",
+          "description": "Petrol station fill-up",
+          "amount": 88.00,
+          "type": "debit",
+          "category": "transport",
+          "merchant": "FuelStop AU",
+          "balance_after": 5828.14,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-014",
+          "date": "2026-06-14",
+          "description": "Restaurant dinner",
+          "amount": 95.50,
+          "type": "debit",
+          "category": "dining",
+          "merchant": "Harbour Restaurant",
+          "balance_after": 5916.14,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-015",
+          "date": "2026-06-13",
+          "description": "Internet bill",
+          "amount": 79.00,
+          "type": "debit",
+          "category": "utilities",
+          "merchant": "NetConnect AU",
+          "balance_after": 6011.64,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-016",
+          "date": "2026-06-12",
+          "description": "Electronics purchase — laptop",
+          "amount": 1850.00,
+          "type": "debit",
+          "category": "shopping",
+          "merchant": "TechWorld AU",
+          "balance_after": 6090.64,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U001-017",
+          "date": "2026-06-10",
+          "description": "FLAGGED: Large withdrawal — unusual amount",
+          "amount": 6500.00,
+          "type": "debit",
+          "category": "transfer",
+          "merchant": "Unknown Transfer",
+          "balance_after": 7940.64,
+          "flagged": true
+        },
+        {
+          "transaction_id": "TXN-U001-018",
+          "date": "2026-06-08",
+          "description": "FLAGGED: Late night transaction 02:14",
+          "amount": 250.00,
+          "type": "debit",
+          "category": "shopping",
+          "merchant": "NightShop Online",
+          "balance_after": 14440.64,
+          "flagged": true
+        },
+        {
+          "transaction_id": "TXN-U001-019",
+          "date": "2026-06-06",
+          "description": "FLAGGED: Foreign merchant transaction",
+          "amount": 430.00,
+          "type": "debit",
+          "category": "shopping",
+          "merchant": "IntlRetailer — Singapore",
+          "balance_after": 14690.64,
+          "flagged": true
+        },
+        {
+          "transaction_id": "TXN-U001-020",
+          "date": "2026-06-01",
+          "description": "Pharmacy purchase",
+          "amount": 34.90,
+          "type": "debit",
+          "category": "medical",
+          "merchant": "CityPharmacy",
+          "balance_after": 15120.64,
+          "flagged": false
+        }
+      ]
+    },
+    "U002": {
+      "profile": {
+        "user_id": "U002",
+        "name": "User Two",
+        "account_number": "****5678",
+        "account_type": "High Interest Savings",
+        "currency": "AUD"
+      },
+      "transactions": [
+        {
+          "transaction_id": "TXN-U002-001",
+          "date": "2026-06-27",
+          "description": "Grocery delivery",
+          "amount": 98.70,
+          "type": "debit",
+          "category": "groceries",
+          "merchant": "QuickGrocer AU",
+          "balance_after": 12450.00,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-002",
+          "date": "2026-06-26",
+          "description": "Salary credit",
+          "amount": 7200.00,
+          "type": "credit",
+          "category": "salary",
+          "merchant": "Employer Payroll",
+          "balance_after": 12548.70,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-003",
+          "date": "2026-06-25",
+          "description": "Coffee shop",
+          "amount": 6.50,
+          "type": "debit",
+          "category": "dining",
+          "merchant": "BrewBar AU",
+          "balance_after": 12450.00,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-004",
+          "date": "2026-06-24",
+          "description": "Water bill",
+          "amount": 140.00,
+          "type": "debit",
+          "category": "utilities",
+          "merchant": "WaterAuth AU",
+          "balance_after": 12456.50,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-005",
+          "date": "2026-06-23",
+          "description": "Concert tickets",
+          "amount": 120.00,
+          "type": "debit",
+          "category": "entertainment",
+          "merchant": "LiveEvents AU",
+          "balance_after": 12596.50,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-006",
+          "date": "2026-06-22",
+          "description": "Sportswear purchase",
+          "amount": 215.00,
+          "type": "debit",
+          "category": "shopping",
+          "merchant": "SportsPro AU",
+          "balance_after": 12716.50,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-007",
+          "date": "2026-06-21",
+          "description": "Bus fare",
+          "amount": 14.00,
+          "type": "debit",
+          "category": "transport",
+          "merchant": "CityBus AU",
+          "balance_after": 12931.50,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-008",
+          "date": "2026-06-20",
+          "description": "Dental checkup",
+          "amount": 180.00,
+          "type": "debit",
+          "category": "medical",
+          "merchant": "SmileDental AU",
+          "balance_after": 12945.50,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-009",
+          "date": "2026-06-19",
+          "description": "Flight booking — Sydney to Brisbane",
+          "amount": 280.00,
+          "type": "debit",
+          "category": "travel",
+          "merchant": "SkyAir AU",
+          "balance_after": 13125.50,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-010",
+          "date": "2026-06-18",
+          "description": "Savings transfer",
+          "amount": 1000.00,
+          "type": "credit",
+          "category": "transfer",
+          "merchant": "Internal Transfer",
+          "balance_after": 13405.50,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-011",
+          "date": "2026-06-17",
+          "description": "Supermarket",
+          "amount": 76.00,
+          "type": "debit",
+          "category": "groceries",
+          "merchant": "FreshMart AU",
+          "balance_after": 12405.50,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-012",
+          "date": "2026-06-16",
+          "description": "Music subscription",
+          "amount": 11.99,
+          "type": "debit",
+          "category": "entertainment",
+          "merchant": "TuneStream AU",
+          "balance_after": 12481.50,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-013",
+          "date": "2026-06-15",
+          "description": "Taxi ride",
+          "amount": 32.00,
+          "type": "debit",
+          "category": "transport",
+          "merchant": "QuickCab AU",
+          "balance_after": 12493.49,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-014",
+          "date": "2026-06-14",
+          "description": "Takeaway dinner",
+          "amount": 45.00,
+          "type": "debit",
+          "category": "dining",
+          "merchant": "NoodleBox AU",
+          "balance_after": 12525.49,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-015",
+          "date": "2026-06-13",
+          "description": "Gas bill",
+          "amount": 95.00,
+          "type": "debit",
+          "category": "utilities",
+          "merchant": "GasCo AU",
+          "balance_after": 12570.49,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-016",
+          "date": "2026-06-12",
+          "description": "Home appliance purchase",
+          "amount": 540.00,
+          "type": "debit",
+          "category": "shopping",
+          "merchant": "HomeGoods AU",
+          "balance_after": 12665.49,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U002-017",
+          "date": "2026-06-10",
+          "description": "FLAGGED: Large withdrawal — unusual amount",
+          "amount": 8200.00,
+          "type": "debit",
+          "category": "transfer",
+          "merchant": "Unknown Transfer",
+          "balance_after": 13205.49,
+          "flagged": true
+        },
+        {
+          "transaction_id": "TXN-U002-018",
+          "date": "2026-06-08",
+          "description": "FLAGGED: Late night transaction 03:47",
+          "amount": 190.00,
+          "type": "debit",
+          "category": "dining",
+          "merchant": "LateBite Online",
+          "balance_after": 21405.49,
+          "flagged": true
+        },
+        {
+          "transaction_id": "TXN-U002-019",
+          "date": "2026-06-06",
+          "description": "FLAGGED: Foreign merchant transaction",
+          "amount": 875.00,
+          "type": "debit",
+          "category": "shopping",
+          "merchant": "GlobalMerchant — Japan",
+          "balance_after": 21595.49,
+          "flagged": true
+        },
+        {
+          "transaction_id": "TXN-U002-020",
+          "date": "2026-06-01",
+          "description": "Optometrist visit",
+          "amount": 220.00,
+          "type": "debit",
+          "category": "medical",
+          "merchant": "ClearVision AU",
+          "balance_after": 22470.49,
+          "flagged": false
+        }
+      ]
+    },
+    "U003": {
+      "profile": {
+        "user_id": "U003",
+        "name": "User Three",
+        "account_number": "****9012",
+        "account_type": "Everyday Savings",
+        "currency": "AUD"
+      },
+      "transactions": [
+        {
+          "transaction_id": "TXN-U003-001",
+          "date": "2026-06-27",
+          "description": "Supermarket shopping",
+          "amount": 203.10,
+          "type": "debit",
+          "category": "groceries",
+          "merchant": "BestBuy Grocers AU",
+          "balance_after": 3150.00,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-002",
+          "date": "2026-06-26",
+          "description": "Fortnightly salary",
+          "amount": 3800.00,
+          "type": "credit",
+          "category": "salary",
+          "merchant": "Employer Payroll",
+          "balance_after": 3353.10,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-003",
+          "date": "2026-06-25",
+          "description": "Breakfast cafe",
+          "amount": 18.00,
+          "type": "debit",
+          "category": "dining",
+          "merchant": "MorningBrew Cafe",
+          "balance_after": 3150.00,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-004",
+          "date": "2026-06-24",
+          "description": "Council rates",
+          "amount": 380.00,
+          "type": "debit",
+          "category": "utilities",
+          "merchant": "LocalCouncil AU",
+          "balance_after": 3168.00,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-005",
+          "date": "2026-06-23",
+          "description": "Books purchase",
+          "amount": 55.00,
+          "type": "debit",
+          "category": "entertainment",
+          "merchant": "BookDepot AU",
+          "balance_after": 3548.00,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-006",
+          "date": "2026-06-22",
+          "description": "Shoe purchase",
+          "amount": 160.00,
+          "type": "debit",
+          "category": "shopping",
+          "merchant": "FootFashion AU",
+          "balance_after": 3603.00,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-007",
+          "date": "2026-06-21",
+          "description": "Train monthly pass",
+          "amount": 180.00,
+          "type": "debit",
+          "category": "transport",
+          "merchant": "MetroRail AU",
+          "balance_after": 3763.00,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-008",
+          "date": "2026-06-20",
+          "description": "Specialist consultation",
+          "amount": 300.00,
+          "type": "debit",
+          "category": "medical",
+          "merchant": "HealthPlus Specialists",
+          "balance_after": 3943.00,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-009",
+          "date": "2026-06-19",
+          "description": "Accommodation — Gold Coast",
+          "amount": 450.00,
+          "type": "debit",
+          "category": "travel",
+          "merchant": "CoastResort AU",
+          "balance_after": 4243.00,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-010",
+          "date": "2026-06-18",
+          "description": "Inter-account transfer",
+          "amount": 200.00,
+          "type": "debit",
+          "category": "transfer",
+          "merchant": "Internal Transfer",
+          "balance_after": 4693.00,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-011",
+          "date": "2026-06-17",
+          "description": "Grocery store",
+          "amount": 130.00,
+          "type": "debit",
+          "category": "groceries",
+          "merchant": "ValueMart AU",
+          "balance_after": 4893.00,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-012",
+          "date": "2026-06-16",
+          "description": "Gaming subscription",
+          "amount": 14.99,
+          "type": "debit",
+          "category": "entertainment",
+          "merchant": "PlayZone AU",
+          "balance_after": 5023.00,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-013",
+          "date": "2026-06-15",
+          "description": "Rideshare trip",
+          "amount": 22.00,
+          "type": "debit",
+          "category": "transport",
+          "merchant": "RideGo AU",
+          "balance_after": 5037.99,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-014",
+          "date": "2026-06-14",
+          "description": "Pizza delivery",
+          "amount": 38.00,
+          "type": "debit",
+          "category": "dining",
+          "merchant": "PizzaRun AU",
+          "balance_after": 5059.99,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-015",
+          "date": "2026-06-13",
+          "description": "Phone bill",
+          "amount": 55.00,
+          "type": "debit",
+          "category": "utilities",
+          "merchant": "MobileNet AU",
+          "balance_after": 5097.99,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-016",
+          "date": "2026-06-12",
+          "description": "Furniture purchase",
+          "amount": 720.00,
+          "type": "debit",
+          "category": "shopping",
+          "merchant": "HomeStyle AU",
+          "balance_after": 5152.99,
+          "flagged": false
+        },
+        {
+          "transaction_id": "TXN-U003-017",
+          "date": "2026-06-10",
+          "description": "FLAGGED: Large withdrawal — unusual amount",
+          "amount": 5800.00,
+          "type": "debit",
+          "category": "transfer",
+          "merchant": "Unknown Transfer",
+          "balance_after": 5872.99,
+          "flagged": true
+        },
+        {
+          "transaction_id": "TXN-U003-018",
+          "date": "2026-06-08",
+          "description": "FLAGGED: Late night transaction 01:32",
+          "amount": 310.00,
+          "type": "debit",
+          "category": "shopping",
+          "merchant": "MidnightDeals Online",
+          "balance_after": 11672.99,
+          "flagged": true
+        },
+        {
+          "transaction_id": "TXN-U003-019",
+          "date": "2026-06-06",
+          "description": "FLAGGED: Foreign merchant transaction",
+          "amount": 620.00,
+          "type": "debit",
+          "category": "shopping",
+          "merchant": "OverseasMerchant — UK",
+          "balance_after": 11982.99,
+          "flagged": true
+        },
+        {
+          "transaction_id": "TXN-U003-020",
+          "date": "2026-06-01",
+          "description": "Blood test fee",
+          "amount": 45.00,
+          "type": "debit",
+          "category": "medical",
+          "merchant": "PathologyPlus AU",
+          "balance_after": 12602.99,
+          "flagged": false
+        }
+      ]
+    }
+  }
+}

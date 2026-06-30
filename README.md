@@ -1,6 +1,6 @@
 # FinGuard AI
 
-An enterprise-grade multi-agent iOS banking assistant with PII governance — runs fully local on macOS.
+An enterprise-grade multi-agent banking assistant with PII governance — runs entirely as a local terminal application — no cloud, no mobile app, no web browser required
 
 ---
 
@@ -92,7 +92,7 @@ Local Data (mock_transactions.json, products.json, audit_logs/)
 | LLM | Gemini 2.0 Flash | Fast token-efficient responses |
 | MCP Server | FastMCP | Local tool hub |
 | PII Detection | Microsoft Presidio | Entity recognition and redaction |
-| CLI | Typer + Rich | macOS terminal interface |
+| CLI | Typer + Rich | terminal interface |
 | Config | python-dotenv | Secrets management |
 | Testing | pytest | Automated test suite |
 
@@ -220,12 +220,15 @@ pytest tests/test_security.py -v
 
 ---
 
-## Important Notes
+## Platform
+FinGuard AI is a terminal CLI application. It was built and
+tested on macOS (Apple M1, macOS 26 Tahoe, Python 3.13.7).
+No macOS-specific APIs are used, so it should also run on
+Linux with Python 3.13+. Windows support via WSL is untested.
 
-- All data is synthetic — no real customer information is used
-- No data leaves your macOS machine — fully local processing
-- Never commit `.env` to git — it contains your Gemini API key
-- This is a demo system — no real banking actions are performed
+There is no iOS app, mobile app, or web interface in this
+project. A future enhancement could expose these agents via
+a REST API for a real iOS client to consume.
 
 ---
 

@@ -43,6 +43,8 @@ MCP Server (local tool hub)
 Local Data (mock_transactions.json, products.json, audit_logs/)
 ```
 
+Before the multi-agent system starts, a standalone Google ADK SessionValidatorAgent runs 7 startup checks — confirming the API key, security flags, and data files are ready — independent of the Antigravity-built agent pipeline.
+
 ---
 
 ## Agent Responsibilities
@@ -56,6 +58,7 @@ Local Data (mock_transactions.json, products.json, audit_logs/)
 | Eligibility | Loan and card eligibility guidance | Assessment disclaimer always appended |
 | Service Request | Disputes, freezes, complaints | Synthetic reference, demo disclaimer |
 | Audit Compliance | Session audit log and compliance view | Sanitized entries only, no PII |
+| Session Validator (ADK) | Validates environment before chat starts | 7 startup checks, never exposes API key value |
 
 ---
 
@@ -75,10 +78,11 @@ Local Data (mock_transactions.json, products.json, audit_logs/)
 
 | Concept | Implementation |
 |---|---|
-| Multi-Agent System | 6 agents with clear separation of concerns via Antigravity |
+| Multi-Agent System | 6 core agents via Antigravity + 1 standalone ADK session validator agent |
 | MCP Server | FastMCP local tool hub wiring all agents to data |
 | Security Features | PII Guardian + Prompt Guard + 100+ keyword blocklist |
 | Antigravity | All agents built and orchestrated using Antigravity |
+| Agent / Multi-agent system (ADK) | Google ADK SessionValidatorAgent — agents/session_validator_adk.py |
 | Deployability | One-command macOS setup via `setup.sh` |
 
 ---
@@ -93,6 +97,7 @@ Local Data (mock_transactions.json, products.json, audit_logs/)
 | MCP Server | FastMCP | Local tool hub |
 | PII Detection | Microsoft Presidio | Entity recognition and redaction |
 | CLI | Typer + Rich | terminal interface |
+| Session Validation | Google ADK | Lightweight startup readiness check |
 | Config | python-dotenv | Secrets management |
 | Testing | pytest | Automated test suite |
 
@@ -110,6 +115,7 @@ finguard-ai/
 │   ├── pii_guardian.py          # PII screening and injection blocking
 │   ├── product_query.py         # Banking product information
 │   ├── service_request.py       # Disputes, freezes, complaints
+│   ├── session_validator_adk.py # Google ADK startup readiness validator
 │   └── transaction_analyst.py   # Spending history and anomaly detection
 ├── config/
 │   ├── __init__.py
@@ -187,6 +193,8 @@ finguard-ai/
 ---
 
 ## Usage Examples
+
+> **Note:** On startup, FinGuard AI runs a Google ADK session validator. You will see a confirmation message showing checks passed before the chat prompt appears.
 
 | Input | Expected Response |
 |---|---|

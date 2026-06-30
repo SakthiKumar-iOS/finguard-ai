@@ -17,6 +17,30 @@ console = Console()
 @app.command()
 def chat():
     """Start an interactive chat session with the Orchestrator Agent."""
+    # --- ADK Session Validator (runs once at startup) ---
+    from agents.session_validator_adk import SessionValidatorAgent
+    validator = SessionValidatorAgent()
+    result = validator.validate()
+    if not result["ready"]:
+        issues_text = "\n".join(f"  • {issue}" for issue in result["issues"])
+        console.print(Panel(
+            f"[bold red]Session validation FAILED "
+            f"({result['checks_passed']}/{result['checks_total']} checks passed)[/bold red]\n\n"
+            f"{issues_text}\n\n"
+            "[yellow]Fix the issues above and restart FinGuard AI.[/yellow]",
+            title="[bold red]ADK Startup Check Failed[/bold red]",
+            border_style="red",
+        ))
+        raise SystemExit(1)
+    console.print(Panel(
+        f"[bold green]Session validated via ADK — "
+        f"{result['checks_passed']}/{result['checks_total']} checks passed. "
+        f"Starting FinGuard AI...[/bold green]",
+        title="[bold green]ADK Startup Check Passed[/bold green]",
+        border_style="green",
+    ))
+    # --- End ADK Session Validator ---
+
     console.print(Panel("[bold green]Welcome to FinGuard AI![/bold green] Type 'exit' or 'quit' to end the session."))
     orchestrator = OrchestratorAgent()
     

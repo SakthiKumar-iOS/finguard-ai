@@ -20,7 +20,7 @@ FinGuard AI is a local, privacy-first multi-agent banking assistant that helps c
 ---
 
 ## Solution Architecture
-
+![FinGuard AI Architecture](docs/light.png)![FinGuard AI Architecture](docs/dark.png)
 ```
 User Input
     ↓
